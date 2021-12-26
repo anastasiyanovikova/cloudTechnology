@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show vacancy by name</title>
+	<style>
+		h1 {
+			color: #000000;
+			background-color: #BBBBBB;
+			padding: 10px;
+			border: solid black thin;
+			border-radius: 10px;
+		}
+		p {
+			color: #000000;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+<h1>Сервис расчета средней зарплаты по открытым вакансиям</h1>
+    <form action="" method="post">
+        <p>
+	    <label for="name">Вакансия</label>
+	    <input type="text" name="name">
+	</p>
+         <p>
+	    <label for="city">Город</label>
+	    <input type="text" name="city">
+	</p>
+	<p>
+	    <input type="submit">
+	</p>
+    </form>
+
+    {% if vac_name %}
+
+    <p>Наименование вакансии: {{ vac_name }}</p>
+    <p>Город поиска: {{ city }}</p>
+    <p>Количество найденных вакансий: {{ total_vac_count }}</p>
+    <p>Количество вакансии с зарплатой: {{ vac_with_salary }}</p>
+    <p>Средняя зарплата: {{ avg_salary }} руб</p>
+    <p>Минимальная зарплата: {{ min_salary }} руб</p>
+    <p>Максимальная зарплата: {{ max_salary }} руб</p>
+
+    {% endif %}
+</body>
+</html>

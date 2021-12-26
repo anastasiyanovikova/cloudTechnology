@@ -1,0 +1,8 @@
+[Unit]
+Description=Serverlogic
+
+[Service]
+ExecStart=/opt/serverlogic/run.sh
+
+[Install]
+WantedBy=multi-user.target
